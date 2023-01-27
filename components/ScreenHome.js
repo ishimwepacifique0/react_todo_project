@@ -9,7 +9,7 @@ import {
     ScrollView,
     TouchableHighlight
 } from 'react-native';
- import { Ionicons,FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
+ import { Ionicons,Entypo,FontAwesome,Feather,MaterialCommunityIcons,FontAwesome5 } from '@expo/vector-icons';
 import React from 'react';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 
@@ -62,7 +62,7 @@ export default function ScreenHome(){
                         <Text style={{ color:'#6A7EB9'}}>View all</Text>
                     </Pressable>
                 </View>
-                <ScrollView style={{flexDirection:'row'}} horizontal>
+                <ScrollView style={{flexDirection:'row'}} horizontal showsHorizontalScrollIndicator={false}>
                 <View style={{backgroundColor:'#091A7A',borderRadius:10,margin:7,padding:1, width:339}}>
                 <View  style={styles.twittercontainer1}>
                     <View style={{ height : 40, width:40,padding:6,backgroundColor:'#7A9FFF',borderRadius:8,marginTop:8}}>
@@ -106,31 +106,31 @@ export default function ScreenHome(){
                     </Pressable>
                     </View>
                 </View>
-                <View style={{backgroundColor:'#091A7A',borderRadius:10,margin:7,padding:1, width:339}}>
+                <View style={{backgroundColor:'#fff',borderRadius:10,margin:7,padding:1, width:339}}>
                 <View  style={styles.twittercontainer1}>
-                    <View style={{ height : 40, width:40,padding:6,backgroundColor:'#7A9FFF',borderRadius:8,marginTop:8}}>
-                    <FontAwesome name="video-camera" size={30} color="white"/>
+                    <View style={{ height : 45, width:45,padding:6,backgroundColor:'silver',borderRadius:8,marginTop:8}}>
+                    <Feather name="slack" size={30} color="teal" />
                     </View>
                     <View style={{display:'flex',flexDirection:'column',justifyContent:'space-between',margin:5}}>
-                        <Text style={{fontSize:18,fontWeight:'bold',color:'white'}}>Product Designer</Text>
+                        <Text style={{fontSize:18,fontWeight:'bold',color:'teal'}}>Product Designer</Text>
                         <Text style={{color:'#4F5B92'}}>Zoom . Untide change</Text>
                     </View>
                     <View style={{ marginTop:13}}>
-                    <MaterialCommunityIcons name="bookmark" size={24} color="blue" />
+                    <MaterialCommunityIcons name="bookmark" size={24} color="teal" />
                     </View>
                 </View>
                     <View style={{flexDirection:'row',margin:5,justifyContent:'space-evenly'}}>
-                    <Pressable style={{ backgroundColor:'#2e3993',padding:3,borderRadius:9,width:100,height:30}}>
+                    <Pressable style={{ backgroundColor:'teal',padding:3,borderRadius:9,width:100,height:30}}>
                         <Text style={{color:'white', textAlign:'center',fontSize:15}}>
                             Fulltime
                         </Text>
                     </Pressable>
-                    <Pressable style={{ backgroundColor:'#2e3993',padding:3,borderRadius:9,width:70}}>
+                    <Pressable style={{ backgroundColor:'teal',padding:3,borderRadius:9,width:70}}>
                         <Text style={{color:'white', textAlign:'center',fontSize:15}}>
                             Remote
                         </Text>
                     </Pressable>
-                    <Pressable style={{ backgroundColor:'#2e3993',padding:3,borderRadius:9,width:70}}>
+                    <Pressable style={{ backgroundColor:'teal',padding:3,borderRadius:9,width:70}}>
                         <Text style={{color:'white', textAlign:'center',fontSize:15}}>
                             Designer
                         </Text>
@@ -138,7 +138,7 @@ export default function ScreenHome(){
                     </View>
                     <View style={{flexDirection:'row',justifyContent:'space-around',margin:9,paddingBottom:8}}>
                         <View style={{flexDirection:'row'}}>
-                            <Text style={{fontSize:20,fontWeight:'bold',color:'white'}}>$12K-$15k|</Text>
+                            <Text style={{fontSize:20,fontWeight:'bold',color:'black'}}>$12K-$15k|</Text>
                             <Text style={{marginTop:8,color:'#4F5B92'}}>month</Text>
                             </View>
                         
@@ -149,32 +149,32 @@ export default function ScreenHome(){
                     </Pressable>
                     </View>
                 </View>
-                <View style={{backgroundColor:'#091A7A',borderRadius:10,margin:7,padding:1, width:339}}>
+                <View style={{backgroundColor:'teal',borderRadius:10,margin:7,padding:1, width:339}}>
                 <View  style={styles.twittercontainer1}>
-                    <View style={{ height : 40, width:40,padding:6,backgroundColor:'#7A9FFF',borderRadius:8,marginTop:8}}>
-                    <FontAwesome name="video-camera" size={30} color="white"/>
+                    <View style={{ height : 45, width:45,padding:6,backgroundColor:'#fff',borderRadius:8,marginTop:8}}>
+                    <Entypo name="tree" size={30} color="black" />
                     </View>
                     <View style={{display:'flex',flexDirection:'column',justifyContent:'space-between',margin:5}}>
                         <Text style={{fontSize:18,fontWeight:'bold',color:'white'}}>Product Designer</Text>
                         <Text style={{color:'#4F5B92'}}>Zoom . Untide change</Text>
                     </View>
                     <View style={{ marginTop:13}}>
-                    <FontAwesome name="bookmark" size={24} color="black" />
+                    <FontAwesome name="bookmark" size={24} color="white" />
                     </View>
                 </View>
                     <View style={{flexDirection:'row',margin:5,justifyContent:'space-evenly'}}>
-                    <Pressable style={{ backgroundColor:'#2e3993',padding:3,borderRadius:9,width:100,height:30}}>
-                        <Text style={{color:'white', textAlign:'center',fontSize:15}}>
+                    <Pressable style={{ backgroundColor:'#ffffff',padding:3,borderRadius:9,width:100,height:30}}>
+                        <Text style={{color:'teal', textAlign:'center',fontSize:15,fontWeight:'bold'}}>
                             Fulltime
                         </Text>
                     </Pressable>
-                    <Pressable style={{ backgroundColor:'#2e3993',padding:3,borderRadius:9,width:70}}>
-                        <Text style={{color:'white', textAlign:'center',fontSize:15}}>
+                    <Pressable style={{ backgroundColor:'#ffffff',padding:3,borderRadius:9,width:70}}>
+                        <Text style={{color:'teal',fontWeight:'bold' ,textAlign:'center',fontSize:15}}>
                             Remote
                         </Text>
                     </Pressable>
-                    <Pressable style={{ backgroundColor:'#2e3993',padding:3,borderRadius:9,width:70}}>
-                        <Text style={{color:'white', textAlign:'center',fontSize:15}}>
+                    <Pressable style={{ backgroundColor:'#ffffff',padding:3,borderRadius:9,width:70}}>
+                        <Text style={{color:'teal', fontWeight:'bold',textAlign:'center',fontSize:15}}>
                             Designer
                         </Text>
                     </Pressable>
@@ -201,7 +201,7 @@ export default function ScreenHome(){
                 </View>
                 <View  style={styles.twittercontainer1}>
                     <View style={{ height : 40, width:40,padding:6,backgroundColor:'#7A9FFF',borderRadius:8,marginTop:8}}>
-                    <FontAwesome name="video-camera" size={30} color="white"/>
+                    <FontAwesome5 name="slack" size={30} color="black" />
                     </View>
                     <View style={{display:'flex',flexDirection:'column',justifyContent:'space-between',margin:5}}>
                         <Text style={{fontSize:18,fontWeight:'bold',color:'black'}}>Senior UI Designer</Text>
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
         borderRadius:45
     },
     searchcontainer:{
-        borderColor:'#EAEBEE',
+        borderColor:'silver',
         display:'flex',
         flexDirection:'row',
         alignItems:'center',

@@ -1,16 +1,12 @@
 import { View, Text } from 'react-native'
 import * as React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import ScreenHome from './ScreenHome'
 
 //screen 
-
-import HomeScreen from './Navigation/HomeScreen'
-import Setting from './Navigation/Setting'
-import Detail from './Navigation/Detail'
 import { Feather, Ionicons } from '@expo/vector-icons'
-import LoginScreen from './loginscreen'
+import Setting from './Navigation/Calculate'
+import User from './user'
 
 
 const { Navigator,Screen } = createBottomTabNavigator()
@@ -18,8 +14,10 @@ const { Navigator,Screen } = createBottomTabNavigator()
 
 export default function Navbottom(){
     return(
-        <NavigationContainer>
-            <Navigator>
+            <Navigator screenOptions={{
+                headerShown:false,
+                tabBarHideOnKeyboard:true
+            }} >
                 <Screen 
                 name='Home' 
                 component={ScreenHome}
@@ -30,7 +28,7 @@ export default function Navbottom(){
                 }}
                 />
                 <Screen 
-                name='Messange' 
+                name='Tax' 
                 component={Setting}
                 options={{
                     tabBarIcon: () =>{
@@ -38,30 +36,15 @@ export default function Navbottom(){
                     }
                 }}/>
                 <Screen 
-                name='File' 
-                component={Setting}
-                options={{
-                    tabBarIcon: () =>{
-                        return <Feather name='file' size={30} />
-                    }
-                }}/>
-                <Screen 
-                name='Notification' 
-                component={Setting}
-                options={{
-                    tabBarIcon: () =>{
-                        return <Ionicons name='search' size={34} />
-                    }
-                }}/>
-                <Screen 
                 name='Profile' 
-                component={LoginScreen}
+                component={User}
                 options={{
                     tabBarIcon: () =>{
+
                         return <Feather name='user' size={30} />
                     }
                 }}/>
+
             </Navigator>
-        </NavigationContainer>
     );
 }

@@ -4,14 +4,15 @@ import {
     TextInput,
     SafeAreaView,
     Platform,
+    Pressable,
     Button,
     StyleSheet,
     StatusBar
 } from 'react-native'
 import React, { useState,useEffect } from 'react'
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
-const ImageLog = require('./image/logo-symbol-dark.png')
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
     return (
       <SafeAreaView style={styles.containerFom}>
         <View style={styles.form}>
@@ -38,9 +39,23 @@ export default function LoginScreen() {
             <View style={styles.submitButton}>
                 <Button 
                 title='Login' 
-                color='teal'
+                color='darkblue'
                 />
             </View>
+            <View>
+              <View style={{flexDirection:'row', justifyContent:'space-between',marginTop:20}}>
+              <View>
+                <Pressable onPress={() =>navigation.navigate('signup') } >
+                  <Text style={{ fontSize:16}}>
+                    Signup
+                  </Text>
+                </Pressable>
+                </View>
+                <View>
+                  <Ionicons name='home' color={'darkblue'} size={34} onPress={()=>navigation.navigate('home')} />
+                </View>
+              </View>
+              </View>
         </View>
       </SafeAreaView>
     );
